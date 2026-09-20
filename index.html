@@ -183,7 +183,7 @@
                 </ul>
 
                 <div class="hero__actions">
-                    <a class="btn btn--primary" href="#">Jetzt Rezept anfordern!</a>
+                    <button class="btn btn--primary" type="button">Jetzt Rezept anfordern!</button>
                 </div>
 
                 <div class="hero__trust trust">
@@ -199,13 +199,13 @@
             </div>
         </section>
 
-        <section class="testimonials">
+        <section class="testimonials" data-carousel>
             <div class="container">
                 <h2 class="testimonials__title"><span class="text-green">Mehr als 750,000</span> zufriedene Patienten</h2>
 
-                <div class="testimonials__viewport">
+                <div class="testimonials__viewport" data-carousel-track>
                     <ul class="testimonials__track">
-                        <li class="testimonial-card">
+                        <li class="testimonial-card" data-carousel-item>
                             <p class="testimonial-card__name">Jan S.</p>
                             <p class="testimonial-card__date">25 October</p>
                             <blockquote class="testimonial-card__text">
@@ -220,7 +220,7 @@
                                 Verifizierte Bewertung
                             </p>
                         </li>
-                        <li class="testimonial-card">
+                        <li class="testimonial-card" data-carousel-item>
                             <p class="testimonial-card__name">Rainer N.</p>
                             <p class="testimonial-card__date">25 October</p>
                             <blockquote class="testimonial-card__text">
@@ -235,7 +235,7 @@
                                 Verifizierte Bewertung
                             </p>
                         </li>
-                        <li class="testimonial-card">
+                        <li class="testimonial-card" data-carousel-item>
                             <p class="testimonial-card__name">Daniel L.</p>
                             <p class="testimonial-card__date">25 October</p>
                             <blockquote class="testimonial-card__text">
@@ -250,7 +250,7 @@
                                 Verifizierte Bewertung
                             </p>
                         </li>
-                        <li class="testimonial-card">
+                        <li class="testimonial-card" data-carousel-item>
                             <p class="testimonial-card__name">Michael A.</p>
                             <p class="testimonial-card__date">25 October</p>
                             <blockquote class="testimonial-card__text">
@@ -268,21 +268,16 @@
                     </ul>
                 </div>
 
-                <div class="testimonials__controls">
-                    <button class="carousel-btn" type="button" data-carousel="prev" aria-label="Vorherige Bewertung">
+                <div class="testimonials__controls" data-carousel-controls data-carousel-label="Bewertung">
+                    <button class="carousel-btn" type="button" data-carousel-prev aria-label="Vorherige Bewertung">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
                             <path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </button>
 
-                    <div class="carousel-dots">
-                        <button class="carousel-dots__dot is-active" type="button" aria-label="Bewertung 1"></button>
-                        <button class="carousel-dots__dot" type="button" aria-label="Bewertung 2"></button>
-                        <button class="carousel-dots__dot" type="button" aria-label="Bewertung 3"></button>
-                        <button class="carousel-dots__dot" type="button" aria-label="Bewertung 4"></button>
-                    </div>
+                    <div class="carousel-dots" data-carousel-dots></div>
 
-                    <button class="carousel-btn" type="button" data-carousel="next" aria-label="Nächste Bewertung">
+                    <button class="carousel-btn" type="button" data-carousel-next aria-label="Nächste Bewertung">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
                             <path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
@@ -291,13 +286,13 @@
             </div>
         </section>
 
-        <section class="steps">
+        <section class="steps" data-carousel>
             <div class="steps__panel">
                 <p class="steps__label">So funktioniert es</p>
                 <h2 class="steps__title">In 3 einfachen Schritten. <span class="text-green">Vollständig online.</span></h2>
 
-                <ul class="steps__list">
-                    <li class="steps__item steps__item--lower">
+                <ul class="steps__list" data-carousel-track>
+                    <li class="steps__item steps__item--lower" data-carousel-item>
                         <span class="steps__number">1</span>
                         <article class="step-card">
                             <h3 class="step-card__title">Füllen Sie einen vertraulichen <span class="text-green">Online-Fragebogen</span> aus</h3>
@@ -312,7 +307,7 @@
                         </article>
                     </li>
 
-                    <li class="steps__item">
+                    <li class="steps__item" data-carousel-item>
                         <span class="steps__number">2</span>
                         <article class="step-card">
                             <h3 class="step-card__title">Erhalten Sie eine ärztlich geprüfte <span class="text-green">Therapieempfehlung</span></h3>
@@ -327,7 +322,7 @@
                         </article>
                     </li>
 
-                    <li class="steps__item steps__item--lower">
+                    <li class="steps__item steps__item--lower" data-carousel-item>
                         <span class="steps__number">3</span>
                         <article class="step-card">
                             <h3 class="step-card__title">Diskrete Lieferung nach Hause innerhalb von <span class="text-green">1–48 Stunden</span></h3>
@@ -343,20 +338,16 @@
                     </li>
                 </ul>
 
-                <div class="steps__controls">
-                    <button class="carousel-btn" type="button" data-carousel="prev" aria-label="Vorheriger Schritt">
+                <div class="steps__controls" data-carousel-controls data-carousel-label="Schritt">
+                    <button class="carousel-btn" type="button" data-carousel-prev aria-label="Vorheriger Schritt">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
                             <path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </button>
 
-                    <div class="carousel-dots">
-                        <button class="carousel-dots__dot is-active" type="button" aria-label="Schritt 1"></button>
-                        <button class="carousel-dots__dot" type="button" aria-label="Schritt 2"></button>
-                        <button class="carousel-dots__dot" type="button" aria-label="Schritt 3"></button>
-                    </div>
+                    <div class="carousel-dots" data-carousel-dots></div>
 
-                    <button class="carousel-btn" type="button" data-carousel="next" aria-label="Nächster Schritt">
+                    <button class="carousel-btn" type="button" data-carousel-next aria-label="Nächster Schritt">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
                             <path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
@@ -420,5 +411,6 @@
             <p class="footer__copyright">2026 © DoktorABC All rights reserved</p>
         </div>
     </footer>
+    <script src="js/script.js" defer></script>
 </body>
 </html>

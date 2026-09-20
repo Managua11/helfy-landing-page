@@ -16,8 +16,6 @@
 
     --font: 'Poppins', Arial, Helvetica, sans-serif;
 
-    --space-sm: 12px;
-    --space-md: 24px;
     --space-lg: 48px;
     --space-xl: 80px;
 
@@ -48,6 +46,7 @@ img,
 svg {
     display: block;
     max-width: 100%;
+    height: auto;
 }
 
 a {
@@ -57,6 +56,10 @@ a {
 
 ul {
     list-style: none;
+}
+
+[hidden] {
+    display: none !important;
 }
 
 button {
@@ -92,20 +95,8 @@ h3 {
     padding: 0 24px;
 }
 
-.section {
-    padding: var(--space-xl) 0;
-}
-
 .text-green {
     color: var(--green);
-}
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
 }
 
 .btn {
@@ -153,6 +144,10 @@ h3 {
     padding: 0 20px;
     font-size: 13px;
     white-space: nowrap;
+}
+
+.topbar:hover .topbar__track {
+    animation-play-state: paused;
 }
 
 .topbar__icon {
@@ -232,7 +227,7 @@ h3 {
 .hero__actions,
 .hero__trust {
     max-width: 740px;
-    padding-left: 80px;
+    padding-left: 72px;
     padding-right: 40px;
 }
 
@@ -355,6 +350,7 @@ h3 {
 .testimonial-card {
     display: flex;
     flex: 1;
+    min-width: 0;
     flex-direction: column;
     align-items: center;
     padding: 28px 24px;
@@ -436,6 +432,15 @@ h3 {
     height: 18px;
 }
 
+.carousel-btn:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+.carousel-btn:disabled:hover {
+    background: var(--white);
+}
+
 .carousel-dots {
     display: flex;
     align-items: center;
@@ -490,6 +495,7 @@ h3 {
 
 .steps__item {
     position: relative;
+    min-width: 0;
 }
 
 .steps__item--lower {
@@ -546,7 +552,10 @@ h3 {
 }
 
 .steps__controls {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
 }
 
 .site-footer {
@@ -633,6 +642,18 @@ h3 {
 }
 
 @media (max-width: 1280px) {
+    .steps__list {
+        gap: 32px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
     .hero__title,
     .hero__subtitle,
     .hero__benefits,
@@ -652,14 +673,6 @@ h3 {
 }
 
 @media (max-width: 992px) {
-    h1 {
-        font-size: 42px;
-    }
-
-    h2 {
-        font-size: 32px;
-    }
-
     .site-header__inner {
         height: 64px;
     }
@@ -776,13 +789,6 @@ h3 {
         font-size: 18px;
     }
 
-    .steps__controls {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 24px;
-    }
-
     .site-footer {
         padding: 0 16px 32px;
     }
@@ -836,10 +842,6 @@ h3 {
 
     .container {
         padding: 0 16px;
-    }
-
-    .section {
-        padding: var(--space-lg) 0;
     }
 
     .logo__text {
