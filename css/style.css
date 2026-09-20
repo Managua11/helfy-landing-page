@@ -11,6 +11,7 @@
     --green-light: #e8f2e4;
     --off-white: #f5f9f6;
     --border: #dfeedd;
+    --line: #f0f0f2;
     --star: #fdda30;
 
     --font: 'Poppins', Arial, Helvetica, sans-serif;
@@ -107,6 +108,250 @@ h3 {
     clip: rect(0 0 0 0);
 }
 
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 28px;
+    border-radius: var(--radius);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.btn--primary {
+    background: var(--green-deep);
+    color: var(--white);
+}
+
+.btn--primary:hover {
+    background: var(--green-deep-hover);
+}
+
+.topbar {
+    background: var(--dark);
+    color: var(--white);
+    overflow: hidden;
+}
+
+.topbar__track {
+    display: flex;
+    width: max-content;
+    animation: topbar-scroll 50s linear infinite;
+}
+
+.topbar__list {
+    display: flex;
+}
+
+.topbar__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.topbar__icon {
+    flex-shrink: 0;
+    width: 15px;
+    height: 15px;
+}
+
+@keyframes topbar-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.site-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+}
+
+.site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 88px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--green);
+}
+
+.logo__mark {
+    width: 30px;
+    height: 30px;
+}
+
+.logo__text {
+    color: var(--dark);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "media title"
+        "media subtitle"
+        "media benefits"
+        "media actions"
+        "media trust";
+}
+
+.hero__media {
+    grid-area: media;
+    background: var(--green-light);
+    overflow: hidden;
+}
+
+.hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+}
+
+.hero__title,
+.hero__subtitle,
+.hero__benefits,
+.hero__actions,
+.hero__trust {
+    max-width: 740px;
+    padding-left: 80px;
+    padding-right: 40px;
+}
+
+.hero__title {
+    grid-area: title;
+    margin-top: 80px;
+}
+
+.hero__subtitle {
+    grid-area: subtitle;
+    margin-top: 16px;
+    font-size: 17px;
+}
+
+.hero__benefits {
+    grid-area: benefits;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 32px;
+}
+
+.hero__actions {
+    grid-area: actions;
+    margin-top: 32px;
+}
+
+.hero__actions .btn {
+    min-width: 320px;
+}
+
+.hero__trust {
+    grid-area: trust;
+    margin-top: 24px;
+    margin-bottom: 80px;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    background: var(--green-tint);
+    font-size: 15px;
+}
+
+.benefit__icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    color: var(--green-deep);
+}
+
+.benefit__text strong {
+    font-weight: 600;
+}
+
+.benefit__note {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.trust {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.trust__badge {
+    width: 44px;
+    height: auto;
+}
+
+.trust__top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.trust__label {
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.trust__stars {
+    color: var(--star);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.trust__score {
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+@media (max-width: 1280px) {
+    .hero__title,
+    .hero__subtitle,
+    .hero__benefits,
+    .hero__actions,
+    .hero__trust {
+        padding-left: 48px;
+        padding-right: 32px;
+    }
+
+    .hero__title {
+        margin-top: 56px;
+    }
+
+    .hero__trust {
+        margin-bottom: 56px;
+    }
+}
+
 @media (max-width: 992px) {
     h1 {
         font-size: 42px;
@@ -114,6 +359,50 @@ h3 {
 
     h2 {
         font-size: 32px;
+    }
+
+    .site-header__inner {
+        height: 64px;
+    }
+
+    .hero__inner {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "subtitle"
+            "benefits"
+            "media"
+            "actions"
+            "trust";
+    }
+
+    .hero__media {
+        aspect-ratio: 1 / 1;
+        margin: 24px 24px 0;
+        border-radius: var(--radius-lg);
+    }
+
+    .hero__title,
+    .hero__subtitle,
+    .hero__benefits,
+    .hero__actions,
+    .hero__trust {
+        max-width: none;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .hero__title {
+        margin-top: 40px;
+    }
+
+    .hero__trust {
+        margin-bottom: 48px;
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+        min-width: 0;
     }
 }
 
@@ -136,5 +425,31 @@ h3 {
 
     .section {
         padding: var(--space-lg) 0;
+    }
+
+    .logo__text {
+        font-size: 19px;
+    }
+
+    .logo__mark {
+        width: 26px;
+        height: 26px;
+    }
+
+    .hero__media {
+        margin: 20px 16px 0;
+    }
+
+    .hero__title,
+    .hero__subtitle,
+    .hero__benefits,
+    .hero__actions,
+    .hero__trust {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero__subtitle {
+        font-size: 15px;
     }
 }
