@@ -292,7 +292,77 @@
         </section>
 
         <section class="steps">
-            <div class="container"></div>
+            <div class="steps__panel">
+                <p class="steps__label">So funktioniert es</p>
+                <h2 class="steps__title">In 3 einfachen Schritten. <span class="text-green">Vollständig online.</span></h2>
+
+                <ul class="steps__list">
+                    <li class="steps__item steps__item--lower">
+                        <span class="steps__number">1</span>
+                        <article class="step-card">
+                            <h3 class="step-card__title">Füllen Sie einen vertraulichen <span class="text-green">Online-Fragebogen</span> aus</h3>
+                            <div class="step-card__media">
+                                <img class="step-card__image"
+                                     src="assets/images/step-1-questionnaire-phone.png"
+                                     srcset="assets/images/step-1-questionnaire-phone-small.png 375w, assets/images/step-1-questionnaire-phone.png 1500w"
+                                     sizes="(max-width: 992px) 85vw, 420px"
+                                     width="1500" height="1125"
+                                     alt="Hand hält ein Smartphone mit dem Online-Fragebogen">
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="steps__item">
+                        <span class="steps__number">2</span>
+                        <article class="step-card">
+                            <h3 class="step-card__title">Erhalten Sie eine ärztlich geprüfte <span class="text-green">Therapieempfehlung</span></h3>
+                            <div class="step-card__media">
+                                <img class="step-card__image"
+                                     src="assets/images/step-2-doctor.png"
+                                     srcset="assets/images/step-2-doctor-small.png 512w, assets/images/step-2-doctor.png 2048w"
+                                     sizes="(max-width: 992px) 85vw, 500px"
+                                     width="2048" height="2048"
+                                     alt="Lächelnder Arzt mit Stethoskop">
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="steps__item steps__item--lower">
+                        <span class="steps__number">3</span>
+                        <article class="step-card">
+                            <h3 class="step-card__title">Diskrete Lieferung nach Hause innerhalb von <span class="text-green">1–48 Stunden</span></h3>
+                            <div class="step-card__media">
+                                <img class="step-card__image"
+                                     src="assets/images/step-3-parcel.png"
+                                     srcset="assets/images/step-3-parcel-small.png 512w, assets/images/step-3-parcel.png 4096w"
+                                     sizes="(max-width: 992px) 85vw, 420px"
+                                     width="4096" height="2712"
+                                     alt="Neutral verpacktes Paket">
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+
+                <div class="steps__controls">
+                    <button class="carousel-btn" type="button" data-carousel="prev" aria-label="Vorheriger Schritt">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+
+                    <div class="carousel-dots">
+                        <button class="carousel-dots__dot is-active" type="button" aria-label="Schritt 1"></button>
+                        <button class="carousel-dots__dot" type="button" aria-label="Schritt 2"></button>
+                        <button class="carousel-dots__dot" type="button" aria-label="Schritt 3"></button>
+                    </div>
+
+                    <button class="carousel-btn" type="button" data-carousel="next" aria-label="Nächster Schritt">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </section>
     </main>
 
